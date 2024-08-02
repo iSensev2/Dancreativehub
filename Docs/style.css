@@ -1,0 +1,225 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f3e3cb, #c9ab5e);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Header */
+.header {
+    background-color: rgba(188, 149, 121, 0.8);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav a:hover {
+    color: brown;
+}
+
+.nav-right {
+    margin-left: auto;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    margin-top: 70px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+.containers {
+    position: relative;
+}
+
+.maincoffee {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.slider {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+}
+
+.words {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.word {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+/* Article Section */
+.article-section {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 20px;
+}
+
+.featured {
+    margin-bottom: 20px;
+}
+
+.featured h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.featured ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.featured li {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.featured a {
+    color: #000;
+    text-decoration: none;
+}
+
+.featured a:hover {
+    color: brown;
+}
+
+/* Survey Section */
+.survey {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(240, 240, 240, 0.8);
+}
+
+.survey legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question label {
+    margin-bottom: 10px;
+}
+
+.question button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #bc9579;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.question button:hover {
+    background-color: brown;
+}
+
+/* Scrolling Image Section */
+.scrolling-image {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+}
+
+.wrapper {
+    display: inline-flex;
+    gap: 10px;
+    animation: slide 16s infinite;
+}
+
+.wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    55% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-200%);
+    }
+    80% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+/* Footer */
+footer {
+    background-color: rgba(188, 149, 121, 0.8);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.foot {
+    color: #fff;
+}

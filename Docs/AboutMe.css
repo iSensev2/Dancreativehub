@@ -1,0 +1,52 @@
+body {
+    margin: auto;
+    padding: auto;
+    background-image: url(https://i.pinimg.com/originals/fe/bc/bb/febcbb34fcead6b3ac7894baea63b1a9.jpg);
+    background-size: cover;
+    font-family: 'Times New Roman', Times, serif;
+    overflow: auto;
+    color: white;
+}
+
+img {
+    height: 10%;
+    width: auto;
+    border-radius: 500px;
+    border: 3px solid green;
+}
+
+.aboutme-container {
+    margin: 10px auto;
+    padding: auto;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+p {
+    margin: 50px;
+    font-size: 30px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+a:active {
+    color: green;
+}
+
+a:hover {
+    color: white;
+}
