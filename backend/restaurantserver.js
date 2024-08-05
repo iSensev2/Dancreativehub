@@ -3,13 +3,12 @@ const mysql = require('mysql2');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const Restaurant = express();
+const app = express();
 
-Restaurant.use(bodyParser.json());
-
-Restaurant.use(cors({
+app.use(bodyParser.json());
+app.use(cors({
     origin: 'http://localhost:3000',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    methods: ['GET', 'POST', 'DELETE'],
 }));
 
 // MySQL connection
@@ -23,14 +22,14 @@ const db = mysql.createConnection({
 // Connect to MySQL
 db.connect(err => {
     if (err) {
-        console.error('Error connecting to the database:', err);
+        console.log('Error connecting to the database: ', err);
         return;
     }
     console.log('Connected to the MySQL database');
 });
 
-// Route to get menu items
-Restaurant.get('/menu', (req, res) => {
+// Get menu items
+app.get('/menu', (req, res) => {
     db.query('SELECT * FROM menu', (err, results) => {
         if (err) {
             return res.status(500).json({ error: err.message });
@@ -39,8 +38,8 @@ Restaurant.get('/menu', (req, res) => {
     });
 });
 
-// Route to place an order
-Restaurant.post('/order', (req, res) => {
+// Add order
+app.post('/order', (req, res) => {
     const { items } = req.body;
 
     const values = items.map(item => [item.id, item.quantity]);
@@ -53,20 +52,19 @@ Restaurant.post('/order', (req, res) => {
     });
 });
 
-// Route to get order status
-Restaurant.get('/order/:id', (req, res) => {
+// Remove order
+app.delete('/order/:id', (req, res) => {
     const { id } = req.params;
 
-    db.query('SELECT * FROM orders WHERE id = ?', [id], (err, results) => {
+    db.query('DELETE FROM orders WHERE id = ?', [id], (err, results) => {
         if (err) {
             return res.status(500).json({ error: err.message });
         }
-        res.json(results[0]);
+        res.json({ success: true });
     });
 });
 
-// Start the server
 const PORT = process.env.PORT || 3001;
-Restaurant.listen(PORT, () => {
+app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
