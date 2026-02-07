@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dan Louigie Dizon - Resume</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/resume.css">
+</head>
+<body>
+    <header class="container text-center">
+        <h1>Dan Louigie Dizon</h1>
+        <p>Junior Front-End Developer</p>
+    </header>
+
+    <main class="container">
+        <section class="education">
+            <h2>Education</h2>
+            <p>Bachelor of Science in Information Technology</p>
+            <p>International Electronics and Technical Institute-Alabang, 2023</p>
+        </section>
+
+        <section class="skills">
+            <h2>Technical Skills</h2>
+            <div class="skill-bar">
+                <span class="skill-name">HTML/CSS</span>
+                <div class="bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+                <span class="skill-level">80%</span>
+            </div>
+            <div class="skill-bar">
+                <span class="skill-name">JavaScript</span>
+                <div class="bar">
+                    <div class="progress" style="width: 60%;"></div>
+                </div>
+                <span class="skill-level">60%</span>
+            </div>
+            <div class="skill-bar">
+                <span class="skill-name">C#</span>
+                <div class="bar">
+                    <div class="progress" style="width: 40%;"></div>
+                </div>
+                <span class="skill-level">40%</span>
+            </div>
+            <div class="skill-bar">
+                <span class="skill-name">UI/UX Design</span>
+                <div class="bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+                <span class="skill-level">90%</span>
+            </div>
+            <div class="skill-bar">
+                <span class="skill-name">Responsive Design</span>
+                <div class="bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+                <span class="skill-level">80%</span>
+            </div>
+        </section>
+
+        <section class="soft-skills">
+            <h2>Soft Skills</h2>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Communication</h5>
+                    <p class="card-text">Strong verbal and written communication skills.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Problem-Solving</h5>
+                    <p class="card-text">Ability to analyze and solve complex problems efficiently.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Update progress bar width based on skills level
+        const skills = document.querySelectorAll('.skill-bar');
+        skills.forEach((skill) => {
+            const progress = skill.querySelector('.progress');
+            const level = skill.querySelector('.skill-level').textContent;
+            progress.style.width = `${level}`;
+        });
+    </script>
+</body>
+</html>
