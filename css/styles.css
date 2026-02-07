@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, Open Sans, Nunito Sans, Noto Sans;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+a {
+  color: black;
+}
+
+a:active {
+  color: purple;
+}
+
+
+/* Header and Intro Section */
+
+.main-header {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+.intro-section {
+  display: flex;
+  margin: 0;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+/* Grid projects*/
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card video {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  margin-top: 0;
+}
+
+.card p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Footer */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px; /* reduced height to make it less obtrusive */
+}
+
+footer .container-portfolio {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+footer p {
+  margin-bottom: 5px;
+}
+
+footer ul.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer ul.nav-links li {
+  margin-right: 10px;
+}
+
+footer ul.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer ul.nav-links li a:hover {
+  color: #ccc;
+}
+
+/* Add this to make the footer stick to the bottom */
+.main-content {
+  min-height: 100vh;
+  margin-bottom: -20px; /* same height as footer */
+}
+
+.main-content:after {
+  content: "";
+  display: block;
+  height: 20px; /* same height as footer */
+}
+
+/* Responsive Design */
+
+@media (max-width: 480px) {
+  .grid-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .main-header h1 {
+    font-size: 18px;
+  }
+
+  .intro-section {
+    padding: 10px;
+  }
+
+  /* Adjust footer for mobile devices */
+  footer {
+    height: 60px;
+  }
+
+  footer .container-portfolio {
+    padding: 5px;
+  }
+}
+
+/* laptop screen responsiveness */
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .grid-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    width: 40%;
+    padding: 15px;
+  }
+
+  .main-header h1 {
+    font-size: 24px;
+  }
+
+  .intro-section {
+    padding: 20px;
+  }
+}

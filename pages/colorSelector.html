@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Selector</title>
+    <link rel="stylesheet" href="../css/colorPalette.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Select a Color</h1>
+        <label for="colorPicker">Pick a Color:</label>
+        <input type="color" id="colorPicker" />
+        
+
+
+
+
+
+        <div class="color-code">
+          <input type="text" id="color-code-input" readonly>
+          <button id="copy-btn">Copy</button>
+        </div>
+    </div>
+
+    <script src="../js/colorScript.js"></script>
+</body>
+</html>
+        <div class="options">
+            <button id="resetButton">Reset</button>
+            <button id="randomColorButton">Random Color</button>
+        </div>
+        <div id="colorDisplay"></div>        <input type="range" id="opacitySlider" min="0" max="100" value="100" />        <label for="opacitySlider">Set Background Opacity:</label>
